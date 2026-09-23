@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://prohormonePro.github.io/camden-work/sitemap.xml
+Sitemap: https://prohormonepro.github.io/camden-work/sitemap.xml

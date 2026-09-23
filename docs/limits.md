@@ -1,6 +1,6 @@
 # Evidence and limits
 
-The current candidate passes 84 local checks. A clean Windows wheel installation exercised the crash-and-replacement challenge, CLI and typed local-host journeys, and uninstall with workspace preservation. A separate fresh installation passed 10 MCP tests and validated packaged schemas against the example, a real export and malformed envelopes. Linux qualification, complete browser acceptance and public download verification remain pending.
+The [September 23 verification addendum](verification-2026-09-23.html) records the released artifact, public Windows/Linux CI and maintainer public-download trials. It supersedes the earlier pending Linux and public-download statements within those tested scopes. The [versioned release snapshot](https://github.com/prohormonePro/camden-work/blob/v0.1.0/docs/limits.md) remains unchanged. Eighty-four local tests, eighteen overlapping installed checks and seven challenge predicates describe different coverage.
 
 ## Scope
 
@@ -18,7 +18,7 @@ The [coverage matrix](coverage.json) binds 18 narrowly described local subcases 
 
 ## Unfinished capability qualification
 
-Inert import, bounded foreground servicing, resource limits, cancellation accounting and local-inbox finalization have isolated tests. The final package matrix and full source-to-deliverable reconciliation remain release obligations. They are not completed by an experimental label. Runnable migration across unrelated targets and remote delivery adapters are outside this implementation.
+Inert import, bounded foreground servicing, resource limits, cancellation accounting and local-inbox finalization have isolated tests. The addendum records later package and public-acquisition qualification; it does not turn every isolated test into production coverage. Runnable migration across unrelated targets and remote delivery adapters are outside this implementation.
 
 ## Independent choice
 

@@ -34,3 +34,7 @@ Reading the project grants no authority to install it, connect accounts, disclos
 ## License
 
 Code and original software documentation: MIT. Original failure-catalog compilation and explanations: CC BY 4.0. Third-party rights remain separate. See [the licensing map](LICENSING.md) for scope and attribution.
+
+## Current verification and first-use feedback
+
+Read the [dated verification addendum](docs/verification-2026-09-23.md) for the exact release artifact, public CI and maintainer observations. [Run the interruption challenge](docs/quickstart.md), then use [I ran it / got stuck](https://github.com/prohormonePro/camden-work/issues/new?template=feedback.md) or [Recovery counterexample](https://github.com/prohormonePro/camden-work/issues/new?template=challenge.md). A brief sanitized report is welcome.

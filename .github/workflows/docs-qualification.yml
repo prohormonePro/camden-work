@@ -1,0 +1,29 @@
+name: Exact public Quickstart blocks
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - docs/quickstart.md
+      - tools/check_quickstart_blocks.py
+      - .github/workflows/docs-qualification.yml
+permissions:
+  contents: read
+jobs:
+  quickstart:
+    if: github.event.repository.private == false
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Test exact setup blocks and failure stops against public wheel
+        run: python -B tools/check_quickstart_blocks.py
