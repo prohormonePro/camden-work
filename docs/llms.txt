@@ -1,0 +1,22 @@
+# Camden Work
+
+> Experimental offline work continuity for a bounded synthetic target.
+
+Research definitions are data, not authority or proof of runtime mitigation. No remote execution service is hosted here.
+
+## Documentation
+
+- [Overview](https://prohormonePro.github.io/camden-work/overview.md)
+- [Architecture](https://prohormonePro.github.io/camden-work/architecture.md)
+- [Constitution](https://prohormonePro.github.io/camden-work/constitution.md)
+- [Quickstart](https://prohormonePro.github.io/camden-work/quickstart.md)
+- [Tools](https://prohormonePro.github.io/camden-work/tools.md)
+- [Catalog](https://prohormonePro.github.io/camden-work/catalog.md)
+- [Limits](https://prohormonePro.github.io/camden-work/limits.md)
+- [Maintenance](https://prohormonePro.github.io/camden-work/maintenance.md)
+- [Security](https://prohormonePro.github.io/camden-work/security.md)
+- [Contributing](https://prohormonePro.github.io/camden-work/contributing.md)
+- [Sources](https://prohormonePro.github.io/camden-work/sources.md)
+- [Crosswalks](https://prohormonePro.github.io/camden-work/crosswalks.md)
+- [Related Work](https://prohormonePro.github.io/camden-work/related-work.md)
+- [Licensing](https://prohormonePro.github.io/camden-work/licensing.md)

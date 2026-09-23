@@ -1,0 +1,35 @@
+# Architecture
+
+This is an implementation-specific public edition, not a reconstruction of unavailable historical architecture drafts.
+
+## One controlled local effect boundary
+
+`Node` opens a controller database and attaches a separate synthetic target database. Local writes use SQLite transactions, rollback journals and synchronous FULL. A target increment and its occurrence marker commit together. The acknowledgment is a later observation, so an actual process exit between commit and acknowledgment leaves recoverable uncertainty.
+
+The operator grants a tenant, target, maximum increment, maximum admitted effects and expiry. Admission reserves the aggregate effect budget, including unknown work. Identical legitimate requests receive different occurrence IDs. Retries of a retained occurrence keep its identity and payload binding.
+
+An exclusive owner consists of a worker label and monotonically increasing epoch. Replacement requires an explicit stop and the expected current epoch. The effect transaction checks current ownership, current grant, deadline, payload identity and dependency evidence again. A stopped predecessor cannot use its old epoch through this API.
+
+## Worker adapter
+
+An operator-controlled worker can call the Python API or the CLI. The operator creates the grant and admits the work; the worker receives only the retained work ID and its claimed epoch. It calls `execute`, then inspects the structured result. On uncertain outcome it calls `reconcile`, never a fresh `admit` masquerading as retry. `verify` obtains a fresh target observation. A successor uses existing records and an explicitly transferred epoch.
+
+These are API roles, not operating-system isolation. A process with unrestricted access to the same account, program and ledger can call operator methods or alter files. Do not give an untrusted worker that access and call it a sandbox. No production credentials or remote effect adapters are included.
+
+## Effects and observations
+
+Admission, dispatch intent, target commit and verification are distinct records. A missing acknowledgment does not mean no effect. An unavailable target keeps a possibly dispatched occurrence unknown and fences conflicting work on that tenant and target. Other granted targets remain eligible. Reconciliation is read-only against the synthetic target and remains possible after a grant is revoked.
+
+Compensation is a separately admitted, version-conditioned inverse increment bound to an observed original effect. It retains both effects and refuses a second compensation reservation. It does not erase history or undo consequences outside this synthetic counter. A rejected condition remains a rejected obligation requiring an operator disposition.
+
+## Continuation and retention
+
+Waits retain their original deadline and attempt budget. `service` is an explicit, bounded foreground reconciliation pass. Registration alone does not arm a background wake. The status and exported result state that limitation. No scheduled worker is installed implicitly.
+
+State remains in the chosen workspace until the operator removes it. `import-review` retains a bounded snapshot as inert evidence, without reviving grants, executing effects or changing current revocations. A runnable migration to an unrelated target is not implemented.
+
+Frozen exports bind their Markdown and structured snapshot. Parent adoption checks those identities against the complete current work set and fresh local target evidence. The local delivery adapter stages, syncs and renames bytes into the node's explicit inbox, then records a separate readback receipt. A crash after copying can be reconciled without copying again. Finalization rechecks adoption, delivery and current target evidence. This local chain does not attest to human attention or any remote provider.
+
+## Research interface
+
+The opt-in local MCP server uses stdio and exposes catalog search, entry lookup and explicitly scoped export inspection. It cannot dispatch effects, execute a shell, fetch URLs or obtain credentials. It implements the documented subset of the pinned MCP protocol; it is not an A2A service or a hosted public execution endpoint.

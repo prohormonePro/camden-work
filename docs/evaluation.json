@@ -1,0 +1,496 @@
+{
+  "schema": "camden.local_test_run.v1",
+  "at": "20260923T065537120761Z",
+  "runtime": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "exit_code": 0,
+  "passed_tests": [
+    "test_adverse_history.AdverseHistory.test_boolean_epoch_is_not_a_typed_owner_version",
+    "test_adverse_history.AdverseHistory.test_expired_grant_does_not_erase_or_repeat_accepted_effect",
+    "test_adverse_history.AdverseHistory.test_parent_and_delivery_receipts_survive_new_controller",
+    "test_adverse_history.AdverseHistory.test_revocation_between_intent_and_effect_is_current",
+    "test_adverse_history.AdverseHistory.test_stop_between_intent_and_effect_fences_late_worker",
+    "test_cancel_closeout.CancelCloseout.test_cancelled_label_without_operator_event_does_not_close",
+    "test_cancel_closeout.CancelCloseout.test_changed_target_visibility_invalidates_cancelled_result",
+    "test_cancel_closeout.CancelCloseout.test_explicit_undispatched_cancellation_is_accounted_not_success",
+    "test_cancel_closeout.CancelCloseout.test_unknown_opaque_cancellation_does_not_close",
+    "test_catalog_outcomes.CatalogOutcomes.test_combined_filters_and_empty_result",
+    "test_catalog_outcomes.CatalogOutcomes.test_each_outcome_matches_full_records",
+    "test_catalog_outcomes.CatalogOutcomes.test_unknown_and_wrong_type_outcomes_rejected",
+    "test_cli_journey.CLIJourney.test_commands_preserve_one_occurrence_across_crash_and_replacement",
+    "test_continuity.ContinuityTests.test_admission_is_not_execution",
+    "test_continuity.ContinuityTests.test_compensation_is_append_only_effect",
+    "test_continuity.ContinuityTests.test_conditional_compensation_preserves_intervening_change",
+    "test_continuity.ContinuityTests.test_export_contains_continuation_records",
+    "test_continuity.ContinuityTests.test_false_compensation_denied",
+    "test_continuity.ContinuityTests.test_import_cannot_restore_revoked_grant_or_replay",
+    "test_continuity.ContinuityTests.test_quoted_tool_output_cannot_be_grant",
+    "test_continuity.ContinuityTests.test_reverification_does_not_trust_cached_success",
+    "test_continuity.ContinuityTests.test_revocation_does_not_block_other_grant",
+    "test_core.CoreTests.test_absence_does_not_allow_retry",
+    "test_core.CoreTests.test_aggregate_reservation",
+    "test_core.CoreTests.test_bad_input_not_authority",
+    "test_core.CoreTests.test_dependency",
+    "test_core.CoreTests.test_distinct_identical_requests",
+    "test_core.CoreTests.test_empty_result_not_complete",
+    "test_core.CoreTests.test_export_immutable_and_local",
+    "test_core.CoreTests.test_export_path_escape",
+    "test_core.CoreTests.test_intact_claim_hash_not_target_evidence",
+    "test_core.CoreTests.test_real_lost_ack_and_replacement",
+    "test_core.CoreTests.test_revocation",
+    "test_core.CoreTests.test_schema_rejected",
+    "test_core.CoreTests.test_stop_is_explicit",
+    "test_core.CoreTests.test_unknown_independent_progress_and_servicing",
+    "test_core.CoreTests.test_wait_budget_not_reset",
+    "test_core.CoreTests.test_wrong_owner_version",
+    "test_core.CoreTests.test_wrong_scope",
+    "test_core.CoreTests.test_wrong_target_receipt",
+    "test_effect_preconditions.EffectPreconditions.test_compensation_cannot_be_admitted_twice",
+    "test_effect_preconditions.EffectPreconditions.test_dependency_target_is_rechecked_before_effect",
+    "test_effect_preconditions.EffectPreconditions.test_export_cannot_call_stale_cached_verification_complete",
+    "test_effect_preconditions.EffectPreconditions.test_reading_unexecuted_work_does_not_invent_pending_effect",
+    "test_finalization.Finalization.test_actual_inbox_receipt_is_idempotent_and_local",
+    "test_finalization.Finalization.test_adoption_requires_actual_local_delivery",
+    "test_finalization.Finalization.test_altered_inbox_cannot_satisfy_delivery",
+    "test_finalization.Finalization.test_copied_file_without_receipt_is_reconciled",
+    "test_finalization.Finalization.test_export_alone_cannot_finalize",
+    "test_finalization.Finalization.test_lost_target_visibility_invalidates_return",
+    "test_finalization.Finalization.test_new_obligation_invalidates_frozen_result",
+    "test_finalization.Finalization.test_pending_copy_does_not_become_a_partial_received_file",
+    "test_host_adapter.HostAdapter.test_changed_event_payload_or_type_is_rejected",
+    "test_host_adapter.HostAdapter.test_current_revocation_blocks_new_host_admission",
+    "test_host_adapter.HostAdapter.test_equal_event_names_on_different_channels_are_distinct",
+    "test_host_adapter.HostAdapter.test_origin_write_failure_rolls_back_admission",
+    "test_host_adapter.HostAdapter.test_quoted_text_or_payload_claim_cannot_choose_host_identity",
+    "test_host_adapter.HostAdapter.test_reconnect_same_event_does_not_admit_again",
+    "test_host_adapter.HostAdapter.test_user_and_machine_input_preserve_distinct_provenance",
+    "test_initialization.Initialization.test_existing_target_is_not_modified_or_adopted",
+    "test_local_recovery.LocalRecovery.test_absence_without_old_epoch_fence_cannot_enable_retry",
+    "test_local_recovery.LocalRecovery.test_cancel_retains_committed_effect",
+    "test_local_recovery.LocalRecovery.test_cancel_undispatched_work_is_not_success",
+    "test_local_recovery.LocalRecovery.test_cancelled_intent_cannot_later_commit",
+    "test_local_recovery.LocalRecovery.test_fenced_local_intent_can_resume_same_occurrence",
+    "test_local_recovery.LocalRecovery.test_opaque_cancel_preserves_unknown",
+    "test_local_recovery.LocalRecovery.test_opaque_profile_cannot_claim_local_quiescence",
+    "test_local_recovery.LocalRecovery.test_recovery_does_not_restore_revoked_authority",
+    "test_mcp.MCPTests.test_actual_stdio_exchange_and_reconnect",
+    "test_mcp.MCPTests.test_bad_json_and_oversize",
+    "test_mcp.MCPTests.test_bounded_search",
+    "test_mcp.MCPTests.test_export_read_not_truth",
+    "test_mcp.MCPTests.test_missing_permission",
+    "test_mcp.MCPTests.test_missing_version_rejected",
+    "test_mcp.MCPTests.test_no_preinit_tool",
+    "test_mcp.MCPTests.test_other_version_negotiates_supported_version_before_tools",
+    "test_mcp.MCPTests.test_path_escape",
+    "test_mcp.MCPTests.test_unknown_argument",
+    "test_report.Reports.test_blocked_report_stands_alone",
+    "test_report.Reports.test_report_preserves_completed_and_pending_work",
+    "test_resource_bounds.ResourceBounds.test_exports_are_bounded_without_overwriting",
+    "test_resource_bounds.ResourceBounds.test_log_budget_does_not_disable_stop_or_revocation",
+    "test_resource_bounds.ResourceBounds.test_new_grant_cannot_reset_node_work_limit",
+    "test_resource_bounds.ResourceBounds.test_new_grants_cannot_escape_node_limit"
+  ],
+  "source_sha256": {
+    "camden_work/__init__.py": "2b331f1dcbc72ddd978474a707f8eb7de25e50cab5e3e23b3cce63537271f543",
+    "camden_work/__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "camden_work/catalog.py": "970bb1e29fb6239feeb43bc2b0893bcba604f997d86d1a4955f51cbcce1e41c5",
+    "camden_work/challenge.py": "ca3c1afeb64491eea748d1e924761523db6ce0c2267b8502b586a18edd8aec13",
+    "camden_work/cli.py": "9f34a0977ccd54d808d65665dd618c4299d8a06dc591b61596420bb8b16542cc",
+    "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3",
+    "camden_work/host.py": "a26b8742eeb89c8cacf926867d927409e41bdb34c5cc41e6d03cc1635db7e5f7",
+    "camden_work/mcp.py": "7038a42786140c8a9a3404ec2a1a150f78c2dfa5d98837034ba64967d90b7184",
+    "tests/test_adverse_history.py": "b3d1ea9380313ccb9106f881d9553d3b185133e5523741dab4db23bdad4a7a3e",
+    "tests/test_cancel_closeout.py": "69836bb0d1089a1629206eee487b19c65d3d0069ddbcc448736b55004b26ec36",
+    "tests/test_catalog_outcomes.py": "b9263a127a2a4f2d8e19affdda2d9c6765865620c6658082f50fd9dc6064c8d4",
+    "tests/test_cli_journey.py": "b14fd4dff36e48f4f58a9cffa8d57c1ccaa78f6c251fb2ed992131a9b26ad199",
+    "tests/test_continuity.py": "5d170cd8743d960dfbd0cd9aa4b053a06a4e04401b78af03d7f237405c50068e",
+    "tests/test_core.py": "c608e2926ada4d274fb7637911aaef11dd090b03604b403ab3fbfc2990551145",
+    "tests/test_effect_preconditions.py": "a1de55b09a575d2f4f8329f98706330c75a786bbb5974c67801a87c87bcd0ea6",
+    "tests/test_finalization.py": "f5e5e586ded25142a4ceec236bbce69150fcf4b69d22fd494201811eca90eb8b",
+    "tests/test_host_adapter.py": "1889ef69511f226bb388bebc9ef7c87bdf2f067321cd45025c2622773ddc00b7",
+    "tests/test_initialization.py": "37b04b47a764bbd09dc0129559b3cc512fec8b24bc46486be01369b5eafbc784",
+    "tests/test_local_recovery.py": "546b887feaa348b6101007046ddd9935162da8f215bbd0dcc6a94cc7dae5ea73",
+    "tests/test_mcp.py": "a13f9f79c6dbca9b6670bd6cd9358ba0248a8dd925d4c7e387b0a4b9ebc2c316",
+    "tests/test_report.py": "ea4bec719517c671aabe57732cd69446d2197d3cbcbbb3f32aeb8897e6fcaa76",
+    "tests/test_resource_bounds.py": "e279a671cfbbce583e86d5ba4b4c34b0d06b0e810aae7b0637aeeab7371f7f74"
+  },
+  "scope": "Windows source-tree unittest run; no provider, hosted security or public-download qualification",
+  "trial_history": [
+    {
+      "at": null,
+      "exit_code": null,
+      "test_count": null,
+      "elapsed_seconds": null,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T045741162309Z",
+      "exit_code": 0,
+      "test_count": 27,
+      "elapsed_seconds": 5.422,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T045948642981Z",
+      "exit_code": 0,
+      "test_count": 33,
+      "elapsed_seconds": 5.191,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T050316452204Z",
+      "exit_code": 0,
+      "test_count": 36,
+      "elapsed_seconds": 5.437,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T050925996808Z",
+      "exit_code": 1,
+      "test_count": 40,
+      "elapsed_seconds": 6.777,
+      "failures": [
+        {
+          "kind": "FAIL",
+          "test": "test_compensation_cannot_be_admitted_twice (test_effect_preconditions.EffectPreconditions.test_compensation_cannot_be_admitted_twice)\r"
+        },
+        {
+          "kind": "FAIL",
+          "test": "test_dependency_target_is_rechecked_before_effect (test_effect_preconditions.EffectPreconditions.test_dependency_target_is_rechecked_before_effect)\r"
+        },
+        {
+          "kind": "FAIL",
+          "test": "test_export_cannot_call_stale_cached_verification_complete (test_effect_preconditions.EffectPreconditions.test_export_cannot_call_stale_cached_verification_complete)\r"
+        },
+        {
+          "kind": "FAIL",
+          "test": "test_reading_unexecuted_work_does_not_invent_pending_effect (test_effect_preconditions.EffectPreconditions.test_reading_unexecuted_work_does_not_invent_pending_effect)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T051006208986Z",
+      "exit_code": 1,
+      "test_count": 40,
+      "elapsed_seconds": 6.723,
+      "failures": [
+        {
+          "kind": "FAIL",
+          "test": "test_intact_claim_hash_not_target_evidence (test_core.CoreTests.test_intact_claim_hash_not_target_evidence)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T051054112417Z",
+      "exit_code": 0,
+      "test_count": 40,
+      "elapsed_seconds": 11.208,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T052105536636Z",
+      "exit_code": 1,
+      "test_count": 45,
+      "elapsed_seconds": 27.371,
+      "failures": [
+        {
+          "kind": "ERROR",
+          "test": "test_absence_without_old_epoch_fence_cannot_enable_retry (test_local_recovery.LocalRecovery.test_absence_without_old_epoch_fence_cannot_enable_retry)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_cancel_retains_committed_effect (test_local_recovery.LocalRecovery.test_cancel_retains_committed_effect)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_cancel_undispatched_work_is_not_success (test_local_recovery.LocalRecovery.test_cancel_undispatched_work_is_not_success)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_fenced_local_intent_can_resume_same_occurrence (test_local_recovery.LocalRecovery.test_fenced_local_intent_can_resume_same_occurrence)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_opaque_profile_cannot_claim_local_quiescence (test_local_recovery.LocalRecovery.test_opaque_profile_cannot_claim_local_quiescence)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T052556081726Z",
+      "exit_code": 0,
+      "test_count": 45,
+      "elapsed_seconds": 13.723,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T052643648359Z",
+      "exit_code": 0,
+      "test_count": 48,
+      "elapsed_seconds": 14.284,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T052804078703Z",
+      "exit_code": 1,
+      "test_count": 54,
+      "elapsed_seconds": 17.461,
+      "failures": [
+        {
+          "kind": "ERROR",
+          "test": "test_actual_inbox_receipt_is_idempotent_and_local (test_finalization.Finalization.test_actual_inbox_receipt_is_idempotent_and_local)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_adoption_requires_actual_local_delivery (test_finalization.Finalization.test_adoption_requires_actual_local_delivery)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_altered_inbox_cannot_satisfy_delivery (test_finalization.Finalization.test_altered_inbox_cannot_satisfy_delivery)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_export_alone_cannot_finalize (test_finalization.Finalization.test_export_alone_cannot_finalize)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_lost_target_visibility_invalidates_return (test_finalization.Finalization.test_lost_target_visibility_invalidates_return)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_new_obligation_invalidates_frozen_result (test_finalization.Finalization.test_new_obligation_invalidates_frozen_result)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T052938067116Z",
+      "exit_code": 0,
+      "test_count": 54,
+      "elapsed_seconds": 11.429,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T053041111626Z",
+      "exit_code": 1,
+      "test_count": 56,
+      "elapsed_seconds": 11.86,
+      "failures": [
+        {
+          "kind": "FAIL",
+          "test": "test_pending_copy_does_not_become_a_partial_received_file (test_finalization.Finalization.test_pending_copy_does_not_become_a_partial_received_file)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T053111801041Z",
+      "exit_code": 0,
+      "test_count": 56,
+      "elapsed_seconds": 11.538,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T053816983656Z",
+      "exit_code": 1,
+      "test_count": 60,
+      "elapsed_seconds": 11.414,
+      "failures": [
+        {
+          "kind": "ERROR",
+          "test": "test_exports_are_bounded_without_overwriting (test_resource_bounds.ResourceBounds.test_exports_are_bounded_without_overwriting)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_log_budget_does_not_disable_stop_or_revocation (test_resource_bounds.ResourceBounds.test_log_budget_does_not_disable_stop_or_revocation)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_new_grant_cannot_reset_node_work_limit (test_resource_bounds.ResourceBounds.test_new_grant_cannot_reset_node_work_limit)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_new_grants_cannot_escape_node_limit (test_resource_bounds.ResourceBounds.test_new_grants_cannot_escape_node_limit)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T053921785443Z",
+      "exit_code": 0,
+      "test_count": 60,
+      "elapsed_seconds": 23.478,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T054058777287Z",
+      "exit_code": 1,
+      "test_count": 61,
+      "elapsed_seconds": 11.863,
+      "failures": [
+        {
+          "kind": "ERROR",
+          "test": "test_other_version_negotiates_supported_version_before_tools (test_mcp.MCPTests.test_other_version_negotiates_supported_version_before_tools)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T054130910513Z",
+      "exit_code": 0,
+      "test_count": 61,
+      "elapsed_seconds": 12.077,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T054903989525Z",
+      "exit_code": 1,
+      "test_count": 64,
+      "elapsed_seconds": 11.331,
+      "failures": [
+        {
+          "kind": "ERROR",
+          "test": "test_combined_filters_and_empty_result (test_catalog_outcomes.CatalogOutcomes.test_combined_filters_and_empty_result)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_each_outcome_matches_full_records (test_catalog_outcomes.CatalogOutcomes.test_each_outcome_matches_full_records)\r"
+        },
+        {
+          "kind": "ERROR",
+          "test": "test_unknown_and_wrong_type_outcomes_rejected (test_catalog_outcomes.CatalogOutcomes.test_unknown_and_wrong_type_outcomes_rejected)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T055005040763Z",
+      "exit_code": 0,
+      "test_count": 64,
+      "elapsed_seconds": 11.312,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T055051665481Z",
+      "exit_code": 1,
+      "test_count": 66,
+      "elapsed_seconds": 12.1,
+      "failures": [
+        {
+          "kind": "ERROR",
+          "test": "test_blocked_report_stands_alone (test_report.Reports.test_blocked_report_stands_alone)\r"
+        },
+        {
+          "kind": "FAIL",
+          "test": "test_report_preserves_completed_and_pending_work (test_report.Reports.test_report_preserves_completed_and_pending_work)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T055151341988Z",
+      "exit_code": 0,
+      "test_count": 66,
+      "elapsed_seconds": 12.497,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T060504998321Z",
+      "exit_code": 1,
+      "test_count": 71,
+      "elapsed_seconds": 13.459,
+      "failures": [
+        {
+          "kind": "FAIL",
+          "test": "test_boolean_epoch_is_not_a_typed_owner_version (test_adverse_history.AdverseHistory.test_boolean_epoch_is_not_a_typed_owner_version)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T060548323765Z",
+      "exit_code": 0,
+      "test_count": 71,
+      "elapsed_seconds": 12.558,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T061746364450Z",
+      "exit_code": 1,
+      "test_count": 72,
+      "elapsed_seconds": 18.107,
+      "failures": [
+        {
+          "kind": "FAIL",
+          "test": "test_commands_preserve_one_occurrence_across_crash_and_replacement (test_cli_journey.CLIJourney.test_commands_preserve_one_occurrence_across_crash_and_replacement)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T061914555781Z",
+      "exit_code": 0,
+      "test_count": 76,
+      "elapsed_seconds": 19.222,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T062413542456Z",
+      "exit_code": 1,
+      "test_count": 77,
+      "elapsed_seconds": 19.311,
+      "failures": [
+        {
+          "kind": "FAIL",
+          "test": "test_existing_target_is_not_modified_or_adopted (test_initialization.Initialization.test_existing_target_is_not_modified_or_adopted)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T062457148120Z",
+      "exit_code": 0,
+      "test_count": 77,
+      "elapsed_seconds": 19.014,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T065421559384Z",
+      "exit_code": 1,
+      "test_count": 78,
+      "elapsed_seconds": 19.757,
+      "failures": [
+        {
+          "kind": "ERROR",
+          "test": "test_host_adapter (unittest.loader._FailedTest.test_host_adapter)\r"
+        }
+      ],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    },
+    {
+      "at": "20260923T065537120761Z",
+      "exit_code": 0,
+      "test_count": 84,
+      "elapsed_seconds": 20.824,
+      "failures": [],
+      "interpretation": "Historical observation; failure may be implementation or fixture. No retrospective cause inferred."
+    }
+  ]
+}

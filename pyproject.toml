@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "camden-work"
+version = "0.1.0"
+description = "Offline work continuity and bounded effect reconciliation"
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT AND CC-BY-4.0"
+license-files = ["LICENSE", "LICENSES/*.txt", "LICENSING.md"]
+
+[project.scripts]
+camden-work = "camden_work.cli:main"
+camden-catalog-mcp = "camden_work.mcp:main"
+
+[tool.setuptools]
+packages = ["camden_work"]
+
+[tool.setuptools.package-data]
+camden_work = ["data/*.json", "data/*.md", "data/LICENSES/*.txt"]

@@ -1,0 +1,23 @@
+'use strict';
+const $=id=>document.getElementById(id);
+const element=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
+let catalog;
+function link(text,url){const a=element('a',text);if(/^https:\/\//.test(url)){a.href=url;a.rel='noreferrer';}return a;}
+function field(parent,key,value){
+ const h=element('h3',key.replaceAll('_',' '));parent.append(h);
+ if(Array.isArray(value)){const list=element('ul');for(const v of value){const li=element('li');if(typeof v==='object')li.append(element('pre',JSON.stringify(v,null,2)));else li.textContent=String(v);list.append(li);}parent.append(list);}
+ else if(value&&typeof value==='object'){const dl=element('dl');for(const [k,v] of Object.entries(value)){dl.append(element('dt',k.replaceAll('_',' ')));const dd=element('dd');dd.textContent=typeof v==='object'?JSON.stringify(v):String(v);dl.append(dd);}parent.append(dl);}
+ else parent.append(element('p',String(value)));
+}
+function render(){
+ const p=new URLSearchParams(location.search);$('query').value=p.get('q')||'';$('family').value=p.get('family')||'';$('basis').value=p.get('basis')||'';$('outcome').value=p.get('outcome')||'';
+ const query=$('query').value.toLocaleLowerCase();const rows=catalog.entries.filter(e=>(!$('family').value||e.family===$('family').value)&&(!$('basis').value||e.evidence_basis===$('basis').value)&&(!$('outcome').value||e.facets.primary_outcome_tags.includes($('outcome').value))&&JSON.stringify(e).toLocaleLowerCase().includes(query));
+ $('count').textContent=rows.length+' of '+catalog.entries.length+' mechanisms';$('results').replaceChildren();$('empty').hidden=rows.length!==0;
+ for(const e of rows){const li=element('li'),a=element('a');a.href=location.pathname+location.search+'#'+encodeURIComponent(e.id);a.append(element('small',e.id+' · '+e.family+' · '+e.evidence_basis),element('h3',e.title),element('span','Research definition · View full detail →'));li.append(a);$('results').append(li);}
+ let requested;try{requested=decodeURIComponent(location.hash.slice(1));}catch{requested='';}
+ const alias=catalog.aliases.find(a=>a.alias_id===requested);const row=catalog.entries.find(e=>e.id===(alias?alias.canonical_id:requested));const detail=$('detail');detail.replaceChildren();detail.hidden=!requested;
+ if(requested&&!row){detail.append(element('h2','Entry not found'),element('p','This identifier does not exist in the released catalog.'));return;}
+ if(row){detail.append(element('p',row.id+' · Research basis '+row.evidence_basis),element('h2',row.title));if(alias)detail.append(element('p','Alias '+alias.alias_id+' resolves to '+row.id+'. '+alias.reason));for(const [key,value] of Object.entries(row)){if(['id','title','family','evidence_basis','sources'].includes(key))continue;field(detail,key,value);}detail.append(element('h3','Sources'));for(const id of row.sources){const source=catalog.sources.find(s=>s.id===id);const p=element('p');if(source){p.append(link(source.title,source.url),element('br'),element('small',source.scope_and_limit));}else p.textContent=id+' · source missing';detail.append(p);}const back=element('a','Back to results');back.href=location.pathname+location.search;detail.append(back);}
+}
+function filters(){const p=new URLSearchParams();for(const [id,k] of [['query','q'],['family','family'],['basis','basis'],['outcome','outcome']])if($(id).value)p.set(k,$(id).value);history.replaceState(null,'',location.pathname+(p.size?'?'+p:''));render();}
+fetch('catalog.json').then(r=>{if(!r.ok)throw Error('catalog unavailable');return r.json();}).then(c=>{catalog=c;for(const tag of Object.keys(c.outcome_tags)){const o=element('option',tag);o.value=tag;$('outcome').append(o);}for(const f of c.families){const id=f.id||f.code;const o=element('option',id+' · '+(f.name||f.title||''));o.value=id;$('family').append(o);}render();$('query').addEventListener('input',filters);$('family').addEventListener('change',filters);$('basis').addEventListener('change',filters);$('outcome').addEventListener('change',filters);window.addEventListener('popstate',render);window.addEventListener('hashchange',()=>{render();if(!$('detail').hidden)$('detail').scrollIntoView({block:'start'});});}).catch(()=>{$('count').textContent='Catalog could not load. Use the downloadable JSON or reload the page.';});

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:camden-work:local-input:1",
+  "title": "Local counter input, version 1",
+  "description": "Payload only. Host identity and existing grant are configured separately by the trusted operator process. Schema conformance grants no authority.",
+  "type": "object",
+  "required": ["delta"],
+  "properties": {"delta": {"type": "integer", "minimum": -10000, "maximum": 10000, "not": {"const": 0}}},
+  "additionalProperties": false
+}

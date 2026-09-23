@@ -1,0 +1,15 @@
+{
+  "package": "camden-work",
+  "version": "0.1.0",
+  "target": "synthetic-local-counter",
+  "network_listener": false,
+  "model_calls": false,
+  "background_scheduler": false,
+  "mcp": {
+    "transport": "local-stdio",
+    "protocol": "2025-11-25",
+    "read_only": true
+  },
+  "remote_exactly_once": false,
+  "research_entries": 283
+}

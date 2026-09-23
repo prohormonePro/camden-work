@@ -1,0 +1,3 @@
+include LICENSE LICENSING.md README.md
+recursive-include LICENSES *.txt
+recursive-include camden_work/data *.json *.txt *.md
