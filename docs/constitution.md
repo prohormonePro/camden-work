@@ -16,3 +16,8 @@ This implementation-specific public edition does not claim to reproduce historic
 The executable scope and trust assumptions are in [Architecture](architecture.md) and [Limits](limits.md). This file is documentation, not an external authority grant or a replacement for the caller's policy.
 
 The project makes no claim about an agent's consciousness, desires or survival. Thermodynamic metaphors do not establish software correctness. An operator's correction is evidence about the requested outcome, not a psychological diagnosis or a reason to ignore a valid stop.
+
+
+## Enforced boundary versus evaluation practice
+
+Rules 1-6 and effect-time portions of rule 8 are bounded by the concrete local methods in Architecture. Rule 7 means retained foreground waits and exposed budgets, not an installed wake. Rule 9 is a contribution/evaluation requirement, not an autonomous learning engine. Rule 10 distinguishes local return evidence from any remote receipt. No general business-meaning compiler, human escalation policy or automatic supervisor is implied.

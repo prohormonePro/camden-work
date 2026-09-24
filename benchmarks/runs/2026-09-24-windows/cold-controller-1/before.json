@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "node": "8855468a247944a9aff9cd316d7b8b73",
+  "owner": {
+    "singleton": 1,
+    "epoch": 0,
+    "worker": null,
+    "stopped": 1
+  },
+  "works": [
+    {
+      "id": "0eecc93529864fc88e8d2b548b43f128",
+      "grant_id": "c488c735ed1a4678a797e4442ad91420",
+      "tenant": "synthetic",
+      "target": "original",
+      "payload": "{\"delta\":1,\"operation\":\"increment\"}",
+      "payload_hash": "3e043eef46e1b33f2389ab60efe8bb23e24f0729e4bcd16db7ef7fe0c8cb7382",
+      "state": "ADMITTED",
+      "attempts": 0,
+      "budget": 3,
+      "deadline": 1790263717.2053292,
+      "profile": "local-atomic"
+    },
+    {
+      "id": "a9d746f705a1411b9d0b6e775a1ef9ae",
+      "grant_id": "919a2529ba984e77a5e9932806069212",
+      "tenant": "synthetic",
+      "target": "z-independent",
+      "payload": "{\"delta\":1,\"operation\":\"increment\"}",
+      "payload_hash": "3e043eef46e1b33f2389ab60efe8bb23e24f0729e4bcd16db7ef7fe0c8cb7382",
+      "state": "ADMITTED",
+      "attempts": 0,
+      "budget": 3,
+      "deadline": 1790263717.227133,
+      "profile": "local-atomic"
+    }
+  ],
+  "grants": [
+    {
+      "id": "c488c735ed1a4678a797e4442ad91420",
+      "tenant": "synthetic",
+      "target": "original",
+      "max_delta": 10,
+      "max_effects": 1,
+      "expires": 1790267017.195329,
+      "revoked": 0
+    },
+    {
+      "id": "919a2529ba984e77a5e9932806069212",
+      "tenant": "synthetic",
+      "target": "z-independent",
+      "max_delta": 10,
+      "max_effects": 1,
+      "expires": 1790267017.2179117,
+      "revoked": 0
+    }
+  ],
+  "attempts": [],
+  "observations": [],
+  "dependencies": [],
+  "waits": [],
+  "events": [
+    {
+      "id": 1,
+      "kind": "operator_grant",
+      "body": "{\"grant\":\"c488c735ed1a4678a797e4442ad91420\",\"max_effects\":1,\"target\":\"original\",\"tenant\":\"synthetic\"}",
+      "at": 1790263417.1963303
+    },
+    {
+      "id": 2,
+      "kind": "admitted",
+      "body": "{\"grant\":\"c488c735ed1a4678a797e4442ad91420\",\"payload_hash\":\"3e043eef46e1b33f2389ab60efe8bb23e24f0729e4bcd16db7ef7fe0c8cb7382\",\"profile\":\"local-atomic\",\"work\":\"0eecc93529864fc88e8d2b548b43f128\"}",
+      "at": 1790263417.206329
+    },
+    {
+      "id": 3,
+      "kind": "operator_grant",
+      "body": "{\"grant\":\"919a2529ba984e77a5e9932806069212\",\"max_effects\":1,\"target\":\"z-independent\",\"tenant\":\"synthetic\"}",
+      "at": 1790263417.2179117
+    },
+    {
+      "id": 4,
+      "kind": "admitted",
+      "body": "{\"grant\":\"919a2529ba984e77a5e9932806069212\",\"payload_hash\":\"3e043eef46e1b33f2389ab60efe8bb23e24f0729e4bcd16db7ef7fe0c8cb7382\",\"profile\":\"local-atomic\",\"work\":\"a9d746f705a1411b9d0b6e775a1ef9ae\"}",
+      "at": 1790263417.2282379
+    }
+  ],
+  "target_effects": [],
+  "limits": [
+    "Local trusted operator and filesystem",
+    "No remote exactly-once guarantee",
+    "Foreground service has no future wake unless invoked"
+  ]
+}

@@ -3,7 +3,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - docs/quickstart.md
+      - docs/**
+      - benchmarks/**
+      - tests/**
+      - tools/**
       - tools/check_quickstart_blocks.py
       - .github/workflows/docs-qualification.yml
 permissions:
@@ -27,3 +30,11 @@ jobs:
           python-version: '3.12'
       - name: Test exact setup blocks and failure stops against public wheel
         run: python -B tools/check_quickstart_blocks.py
+      - name: Validate scoped claims and isolated source tests
+        run: |
+          python -B tools/check_claims.py
+          python -B -m unittest discover -s tests -v
+      - name: Install pinned documentation renderer
+        run: python -m pip install --disable-pip-version-check Markdown==3.10
+      - name: Verify canonical generation and local links
+        run: python -B tools/check_generated.py

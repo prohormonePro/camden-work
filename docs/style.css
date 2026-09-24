@@ -2,3 +2,6 @@
 .prose{max-width:1000px}.prose h1{font-size:clamp(36px,6vw,60px)}.prose h2{font-size:clamp(26px,4vw,36px);margin-top:44px}.prose section{overflow-wrap:anywhere}.filters{grid-template-columns:minmax(200px,2fr) repeat(3,minmax(120px,1fr))}@media(max-width:850px){.filters{grid-template-columns:1fr 1fr}}@media(max-width:650px){.filters{grid-template-columns:1fr}.prose th,.prose td{padding:8px;font-size:14px}}
 nav a{display:inline-flex;align-items:center;min-height:44px}.brand{display:inline-flex;align-items:center;min-height:44px}footer>a{display:inline-flex;align-items:center;min-height:44px}.actions>a{display:inline-flex;align-items:center;min-height:44px}
 @media(max-width:650px){.split aside{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 18px;align-items:center}}
+
+/* Keep long evidence names and tabular research within narrow viewports. */
+.prose section{min-width:0}.prose table{display:block;max-width:100%;overflow-x:auto}.prose pre{max-width:100%;overflow-x:auto}.prose p,.prose td,.prose li{overflow-wrap:anywhere}.hero h1{font-size:clamp(2.4rem,6vw,5.5rem)}

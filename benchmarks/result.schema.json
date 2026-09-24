@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema",
+    "scenario_version",
+    "runtime",
+    "source_sha256",
+    "episodes",
+    "started_episodes",
+    "completed_episodes"
+  ],
+  "properties": {
+    "episodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "episode_id",
+          "scenario",
+          "status",
+          "B_e",
+          "D_e",
+          "S_e",
+          "A_e",
+          "U_e",
+          "events",
+          "process_exits"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "STARTED",
+              "BUSINESS_COMPLETE",
+              "VALID_AUTHORITY_STOP",
+              "OWNED_BLOCKED",
+              "FAILED",
+              "UNSUPPORTED"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

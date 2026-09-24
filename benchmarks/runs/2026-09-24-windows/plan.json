@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "scenario_version": "cold-process-v1",
+  "runtime": {
+    "python": "3.12.10",
+    "os": "Windows"
+  },
+  "seed": "deterministic fault schedule; UUID identities vary",
+  "repetitions": 2,
+  "storage": "SQLite DELETE journal, synchronous FULL, trusted local filesystem",
+  "deadline_seconds": 300,
+  "per_process_timeout_seconds": 15,
+  "system_under_test": "unchanged 0.1.0 core plus separately identified benchmark controller; harness restart assistance counted",
+  "source_sha256": {
+    "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3",
+    "benchmarks/continuity.py": "16dc66151fb24f20a342bdcc503d6173a34a03c2a2259aefe44853b9f2d09e87"
+  },
+  "episodes": []
+}

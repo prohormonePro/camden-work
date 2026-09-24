@@ -29,6 +29,8 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Run isolated source tests
         run: python -B -m unittest discover -s tests -v
+      - name: Validate scoped claim references
+        run: python -B tools/check_claims.py
       - name: Validate generated local documentation
         run: python -B tools/check_docs.py
       - name: Install pinned build tool

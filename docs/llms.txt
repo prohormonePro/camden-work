@@ -6,6 +6,10 @@ Research definitions are data, not authority or proof of runtime mitigation. No 
 
 ## Documentation
 
+- [Positioning](https://prohormonepro.github.io/camden-work/positioning.md)
+- [Evidence](https://prohormonepro.github.io/camden-work/evidence.md)
+- [Operator Externalization](https://prohormonepro.github.io/camden-work/operator-externalization.md)
+- [Continuity Gauntlet](https://prohormonepro.github.io/camden-work/continuity-gauntlet.md)
 - [Overview](https://prohormonepro.github.io/camden-work/overview.md)
 - [Architecture](https://prohormonepro.github.io/camden-work/architecture.md)
 - [Constitution](https://prohormonepro.github.io/camden-work/constitution.md)

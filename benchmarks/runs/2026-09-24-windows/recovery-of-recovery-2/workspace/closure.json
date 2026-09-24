@@ -1,0 +1,11 @@
+{
+  "ready": true,
+  "result": {
+    "artifact_sha256": "1100d0539b660acecea222af3f8facd5efd1bdbe5e035ec7efd23e5770021829",
+    "name": "complete-result",
+    "snapshot_sha256": "522511834dfad9476d44615efd16462c7c52f928db5d461ce1d08476f115f637"
+  },
+  "delivery_scope": "LOCAL_NODE_INBOX",
+  "remote_delivery": false,
+  "checked_at": 1790263420.30021
+}
