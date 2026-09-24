@@ -1,5 +1,9 @@
 # Camden Work
 
+**The worker is replaceable. The operator should not become the recovery mechanism.**
+
+The worker died. The write survived. Should the replacement retry? Camden Work makes that local failure inspectable, then asks a larger question: how much human reconstruction is needed to finish authorized work honestly?
+
 Make the work difficult to lose, and the worker easy to replace.
 
 Camden Work is an experimental, offline Python controller for a bounded local counter workflow. It retains grants, occurrences, owner epochs, attempts, target observations and unfinished work across process replacement. Its research browser contains 283 failure mechanisms, separately from implementation coverage.
@@ -18,6 +22,18 @@ python -m camden_work --workspace ./camden-demo status
 Choose a new directory. The challenge refuses to overwrite an existing controller. It commits a local effect, terminates the worker before acknowledgment, replaces the worker, reads the target, preserves uncertainty while evidence is hidden, and completes an independent task. It then restores evidence and services the registered reconciliation wait. The unsafe comparison deliberately retries under a new identity; it is not a benchmark of another framework.
 
 The result is in `camden-demo/exports/challenge-result.md` with the complete machine snapshot beside it. Local export is not remote delivery.
+
+## What is demonstrated, and what remains open
+
+The released challenge has seven predicates and two real worker exits. Its parent retains the recovery sequence. It does not demonstrate autonomous controller replacement or run the final adoption/delivery chain.
+
+A separate [cold-process experiment](docs/continuity-gauntlet.md) joins interrupted work to local result closure. Clean controllers discover both predeclared obligations from durable state. The benchmark harness launches their replacements, and those launches count as assistance. This is a source-tree evaluation asset, not a new v0.1.0 CLI feature or a production supervisor.
+
+Start with the [evidence register](docs/evidence.md), then the [operator-burden specification](docs/operator-externalization.md). The public counter exercise does not prove the capabilities of the private Camden installation.
+
+## Where Camden is not unique
+
+Durable engines already recover workflow state. Governance systems already bind authority, retain evidence and govern output. Camden's emphasis is the complete obligation, including uncertainty, useful independent progress and truthful return. [Positioning](docs/positioning.md) and [related work](docs/related-work.md) identify the overlap and the matched experiment that could defeat a claimed advantage. No competitor benchmark or worldwide-uniqueness finding is supplied.
 
 ## Read before integration
 

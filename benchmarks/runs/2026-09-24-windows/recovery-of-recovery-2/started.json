@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "scenario_version": "cold-process-v1",
+  "episode_id": "recovery-of-recovery-2",
+  "scenario": "recovery-of-recovery",
+  "status": "STARTED",
+  "B_e": 0,
+  "D_e": 0,
+  "S_e": {
+    "fixture_setup": "two grants, two obligations, takeover policy",
+    "human_minutes": "NOT_MEASURED"
+  },
+  "A_e": 0,
+  "U_e": [
+    "automatic_restart",
+    "background_wake",
+    "remote_effects",
+    "new_business_decision"
+  ],
+  "events": [],
+  "process_exits": [],
+  "started_at": 1790263419.5868242
+}

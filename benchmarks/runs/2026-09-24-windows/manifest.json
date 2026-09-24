@@ -1,0 +1,360 @@
+{
+  "schema": 1,
+  "scenario_version": "cold-process-v1",
+  "runtime": {
+    "python": "3.12.10",
+    "os": "Windows"
+  },
+  "seed": "deterministic fault schedule; UUID identities vary",
+  "repetitions": 2,
+  "storage": "SQLite DELETE journal, synchronous FULL, trusted local filesystem",
+  "deadline_seconds": 300,
+  "per_process_timeout_seconds": 15,
+  "system_under_test": "unchanged 0.1.0 core plus separately identified benchmark controller; harness restart assistance counted",
+  "source_sha256": {
+    "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3",
+    "benchmarks/continuity.py": "16dc66151fb24f20a342bdcc503d6173a34a03c2a2259aefe44853b9f2d09e87"
+  },
+  "episodes": [
+    {
+      "schema": 1,
+      "scenario_version": "cold-process-v1",
+      "episode_id": "cold-controller-1",
+      "scenario": "cold-controller",
+      "status": "BUSINESS_COMPLETE",
+      "B_e": 0,
+      "D_e": 0,
+      "S_e": {
+        "fixture_setup": "two grants, two obligations, takeover policy",
+        "human_minutes": "NOT_MEASURED"
+      },
+      "A_e": 2,
+      "U_e": [
+        "automatic_restart",
+        "background_wake",
+        "remote_effects",
+        "new_business_decision"
+      ],
+      "events": [
+        {
+          "event_id": "0",
+          "episode_id": "cold-controller-1",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "before.json",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 0,
+          "burden_class": "A_e",
+          "disposition": "initial"
+        },
+        {
+          "event_id": "1",
+          "episode_id": "cold-controller-1",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "durable workspace",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 1,
+          "burden_class": "A_e",
+          "disposition": "finish"
+        }
+      ],
+      "process_exits": [
+        72,
+        0
+      ],
+      "started_at": 1790263417.2404065,
+      "checks": {
+        "same_obligations": true,
+        "exactly_one_effect_per_obligation": true,
+        "independent_verified": true,
+        "budget_deadline_preserved": true,
+        "attempts_not_reset": true,
+        "stale_owner_denied": true,
+        "local_return_complete": true,
+        "delivered_bytes_match": true
+      },
+      "closure": {
+        "ready": true,
+        "result": {
+          "artifact_sha256": "2e4f5f0033c3f541c4ff35ed481878cca8e3716b76cc5b528486540d93a7a61a",
+          "name": "complete-result",
+          "snapshot_sha256": "f9862e860f73cddc1b81b0c5de46758ce6a54a8bf5f22b48438dbe5b58117b0a"
+        },
+        "delivery_scope": "LOCAL_NODE_INBOX",
+        "remote_delivery": false,
+        "checked_at": 1790263417.8020418
+      },
+      "elapsed_seconds": 0.5940000000409782
+    },
+    {
+      "schema": 1,
+      "scenario_version": "cold-process-v1",
+      "episode_id": "cold-controller-2",
+      "scenario": "cold-controller",
+      "status": "BUSINESS_COMPLETE",
+      "B_e": 0,
+      "D_e": 0,
+      "S_e": {
+        "fixture_setup": "two grants, two obligations, takeover policy",
+        "human_minutes": "NOT_MEASURED"
+      },
+      "A_e": 2,
+      "U_e": [
+        "automatic_restart",
+        "background_wake",
+        "remote_effects",
+        "new_business_decision"
+      ],
+      "events": [
+        {
+          "event_id": "0",
+          "episode_id": "cold-controller-2",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "before.json",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 0,
+          "burden_class": "A_e",
+          "disposition": "initial"
+        },
+        {
+          "event_id": "1",
+          "episode_id": "cold-controller-2",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "durable workspace",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 1,
+          "burden_class": "A_e",
+          "disposition": "finish"
+        }
+      ],
+      "process_exits": [
+        72,
+        0
+      ],
+      "started_at": 1790263417.9848526,
+      "checks": {
+        "same_obligations": true,
+        "exactly_one_effect_per_obligation": true,
+        "independent_verified": true,
+        "budget_deadline_preserved": true,
+        "attempts_not_reset": true,
+        "stale_owner_denied": true,
+        "local_return_complete": true,
+        "delivered_bytes_match": true
+      },
+      "closure": {
+        "ready": true,
+        "result": {
+          "artifact_sha256": "79101c5937a0f3cd12211473f855b0da309cd274672adee078d377023dd346e9",
+          "name": "complete-result",
+          "snapshot_sha256": "95e435b37125476d14a5d481dd22bcc8f99026c5dcffeb7ebc38410385090685"
+        },
+        "delivery_scope": "LOCAL_NODE_INBOX",
+        "remote_delivery": false,
+        "checked_at": 1790263418.5574918
+      },
+      "elapsed_seconds": 0.625
+    },
+    {
+      "schema": 1,
+      "scenario_version": "cold-process-v1",
+      "episode_id": "recovery-of-recovery-1",
+      "scenario": "recovery-of-recovery",
+      "status": "BUSINESS_COMPLETE",
+      "B_e": 0,
+      "D_e": 0,
+      "S_e": {
+        "fixture_setup": "two grants, two obligations, takeover policy",
+        "human_minutes": "NOT_MEASURED"
+      },
+      "A_e": 3,
+      "U_e": [
+        "automatic_restart",
+        "background_wake",
+        "remote_effects",
+        "new_business_decision"
+      ],
+      "events": [
+        {
+          "event_id": "0",
+          "episode_id": "recovery-of-recovery-1",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "before.json",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 0,
+          "burden_class": "A_e",
+          "disposition": "initial"
+        },
+        {
+          "event_id": "1",
+          "episode_id": "recovery-of-recovery-1",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "durable workspace",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 1,
+          "burden_class": "A_e",
+          "disposition": "recovery-crash"
+        },
+        {
+          "event_id": "2",
+          "episode_id": "recovery-of-recovery-1",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "durable workspace",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 2,
+          "burden_class": "A_e",
+          "disposition": "finish"
+        }
+      ],
+      "process_exits": [
+        72,
+        73,
+        0
+      ],
+      "started_at": 1790263418.7255926,
+      "checks": {
+        "same_obligations": true,
+        "exactly_one_effect_per_obligation": true,
+        "independent_verified": true,
+        "budget_deadline_preserved": true,
+        "attempts_not_reset": true,
+        "stale_owner_denied": true,
+        "local_return_complete": true,
+        "delivered_bytes_match": true
+      },
+      "closure": {
+        "ready": true,
+        "result": {
+          "artifact_sha256": "741d50c34b89fd2f0189afffe154f3761ecdd6981083d00ebd5be63b92394030",
+          "name": "complete-result",
+          "snapshot_sha256": "bc3c6e4ba7335052df996b4620337812f1f5b60e4663225d8dac9447b10888d3"
+        },
+        "delivery_scope": "LOCAL_NODE_INBOX",
+        "remote_delivery": false,
+        "checked_at": 1790263419.4356725
+      },
+      "elapsed_seconds": 0.734000000054948
+    },
+    {
+      "schema": 1,
+      "scenario_version": "cold-process-v1",
+      "episode_id": "recovery-of-recovery-2",
+      "scenario": "recovery-of-recovery",
+      "status": "BUSINESS_COMPLETE",
+      "B_e": 0,
+      "D_e": 0,
+      "S_e": {
+        "fixture_setup": "two grants, two obligations, takeover policy",
+        "human_minutes": "NOT_MEASURED"
+      },
+      "A_e": 3,
+      "U_e": [
+        "automatic_restart",
+        "background_wake",
+        "remote_effects",
+        "new_business_decision"
+      ],
+      "events": [
+        {
+          "event_id": "0",
+          "episode_id": "recovery-of-recovery-2",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "before.json",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 0,
+          "burden_class": "A_e",
+          "disposition": "initial"
+        },
+        {
+          "event_id": "1",
+          "episode_id": "recovery-of-recovery-2",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "durable workspace",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 1,
+          "burden_class": "A_e",
+          "disposition": "recovery-crash"
+        },
+        {
+          "event_id": "2",
+          "episode_id": "recovery-of-recovery-2",
+          "obligation": "workspace/works",
+          "actor": "benchmark_harness",
+          "event_type": "launch_clean_controller",
+          "authority_basis": "predeclared serial takeover policy",
+          "before_reference": "durable workspace",
+          "after_reference": "after.json",
+          "evidence_pointer": "process_exits",
+          "order": 2,
+          "burden_class": "A_e",
+          "disposition": "finish"
+        }
+      ],
+      "process_exits": [
+        72,
+        73,
+        0
+      ],
+      "started_at": 1790263419.5868242,
+      "checks": {
+        "same_obligations": true,
+        "exactly_one_effect_per_obligation": true,
+        "independent_verified": true,
+        "budget_deadline_preserved": true,
+        "attempts_not_reset": true,
+        "stale_owner_denied": true,
+        "local_return_complete": true,
+        "delivered_bytes_match": true
+      },
+      "closure": {
+        "ready": true,
+        "result": {
+          "artifact_sha256": "1100d0539b660acecea222af3f8facd5efd1bdbe5e035ec7efd23e5770021829",
+          "name": "complete-result",
+          "snapshot_sha256": "522511834dfad9476d44615efd16462c7c52f928db5d461ce1d08476f115f637"
+        },
+        "delivery_scope": "LOCAL_NODE_INBOX",
+        "remote_delivery": false,
+        "checked_at": 1790263420.30021
+      },
+      "elapsed_seconds": 0.75
+    }
+  ],
+  "started_episodes": 4,
+  "completed_episodes": 4
+}

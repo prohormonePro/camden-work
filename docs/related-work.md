@@ -17,3 +17,20 @@ Sources: [Temporal workflow definition](https://docs.temporal.io/workflow-defini
 The external-effect qualifications in the final column are evaluation boundaries, not claims that the other projects lack safeguards. Approval, connector, deployment and failure semantics were not exhaustively audited here. Consult the actual version and target contract before integration.
 
 Replay determinism does not categorically exclude LLM work. Temporal and Restate explicitly describe separating nondeterministic operations from replayed control. Existing systems deserve credit for durable workflow primitives; Camden's synthetic challenge is not an industry comparison.
+
+
+## September 24 review: concrete overlap
+
+The package-version observations above remain dated September 23 and have not been revalidated as latest versions. Camden Work 0.1.0 is now released; “candidate” in the earlier comparison describes that historical review. The following source-only review is dated September 24, 2026. No external implementation was installed or executed. Cross-system composition is NOT_ASSESSED.
+
+| Source | Reviewed overlap | Still to establish in a matched evaluation |
+|---|---|---|
+| [VAIS Boundary README](https://github.com/stratomarco/vais-boundary/blob/main/README.md) | Trusted immutable contracts, exact-action approvals, provenance/information flow, independent effect verification and indeterminate MCP outcomes. | Composition with durable ownership, recovery and complete return. It is more than a permission check. |
+| [GATE specification](https://deterministicagents.ai/spec) | Tool/memory gateways, versioned contracts, audit/replay and human-review obligations. C20 covers final-output classification and review before delivery. | Actual enforcing implementation and interrupted-obligation behavior. This is a rolling specification, not conformance evidence; section/footer revision labels differ. |
+| [Guardian limitations](https://github.com/sylvesterkaczmarek/guardian-agent-runtime/blob/main/docs/limitations.md) | Reference-monitor experiments; reference implementation explicitly describes process-local nonce, revocation and budget state and disclaims restart-safe replay protection. | Persistent extensions if used. Camden's local retained ownership is a narrow implementation contrast, not general superiority. |
+| [Temporal execution](https://docs.temporal.io/workflow-execution) | Workflow state recovery through event-history replay. | Application authority, ambiguous effects and return criteria under the same target contract. |
+| [Restate steps](https://docs.restate.dev/develop/python/durable-steps) | Journaled operation results and retry count/time limits. | Selected target's uncertain-effect and duplicate-prevention semantics. |
+| [DBOS workflows](https://docs.dbos.dev/python/tutorials/workflow-tutorial) | Recovery from completed steps and durable workflow identity. | External effects inside retried steps and complete business verification. |
+| [LangGraph persistence](https://docs.langchain.com/oss/python/langgraph/persistence) | Checkpointers and stores; restart persistence depends on backend configuration. | Configured storage, side effects and recovery policy, not an in-memory strawman. |
+
+These are documentation/README observations, not measurements. Rolling sources are not pinned implementation versions; retrieval date is the binding available here. A missing homepage statement is not evidence of a missing capability. A [fair experiment](positioning.md) must allow recommended durable configurations and publish unsuccessful episodes too.
