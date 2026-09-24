@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "claims": [
+    {
+      "claim_id": "CW-01",
+      "public_wording": "Original retained occurrence has one local effect after worker loss and reconciliation.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_core.py::test_real_lost_ack_and_replacement"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-02",
+      "public_wording": "Unknown work fences conflicting retries while an independently granted target can finish.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_core.py::test_unknown_independent_progress_and_servicing"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-03",
+      "public_wording": "Current owner epoch is checked at the local effect boundary.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_core.py::test_wrong_owner_version"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-04",
+      "public_wording": "Distinct legitimate identical requests retain distinct occurrence IDs.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_core.py::test_distinct_identical_requests"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-05",
+      "public_wording": "Re-registering a wait does not replenish its original budget.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_core.py::test_wait_budget_not_reset"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-06",
+      "public_wording": "Local result closure rejects missing adoption or missing delivery.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_finalization.py::test_export_alone_cannot_finalize",
+        "tests/test_finalization.py::test_adoption_requires_actual_local_delivery"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-07",
+      "public_wording": "Changed delivered bytes, expanded work scope or missing current evidence prevent local closure.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_finalization.py::test_altered_inbox_cannot_satisfy_delivery",
+        "tests/test_finalization.py::test_new_obligation_invalidates_frozen_result",
+        "tests/test_finalization.py::test_lost_target_visibility_invalidates_return"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-08",
+      "public_wording": "Version-conditioned compensation preserves intervening local changes.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [
+        "tests/test_continuity.py::test_conditional_compensation_preserves_intervening_change"
+      ],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PUBLIC_SOURCE_AND_TEST_MAPPED",
+      "observed_result": "Named source/test mapping, not a fresh execution claim",
+      "unsupported_extensions": [
+        "Trusted local SQLite only"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-09",
+      "public_wording": "Four harness-assisted cold-process episodes completed the same obligations through local return.",
+      "package_version": "0.1.0",
+      "source_commit": null,
+      "source_sha256": {
+        "benchmarks/continuity.py": "16dc66151fb24f20a342bdcc503d6173a34a03c2a2259aefe44853b9f2d09e87"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "benchmarks/continuity.py"
+      ],
+      "named_tests": [
+        "tests/test_cold_controller.py::test_cold_process_and_recovery_of_recovery_reach_local_return"
+      ],
+      "run_id": "2026-09-24-windows",
+      "evidence_artifact_refs": [
+        "benchmarks/runs/2026-09-24-windows/manifest.json"
+      ],
+      "evidence_status": "MAINTAINER_REPORTED",
+      "observed_result": "4 started, 4 BUSINESS_COMPLETE; exits [72,0] twice and [72,73,0] twice; A_e 2 or 3; B_e=D_e=0 within synthetic trials",
+      "unsupported_extensions": [
+        "No autonomous restart/wake, remote delivery, new business decision or competitor comparison"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-10",
+      "public_wording": "Autonomous background wake is absent from the released runtime.",
+      "package_version": "0.1.0",
+      "source_commit": "b48a377b9675dc64a03b0957fe5e56d4c8fac1e8",
+      "source_sha256": {
+        "camden_work/core.py": "97721639c5c13f1f56323d70927505a20fde680500758aa0fb584d77b1c6aca3"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "camden_work/core.py"
+      ],
+      "named_tests": [],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "UNSUPPORTED_THIS_RELEASE",
+      "observed_result": "service is a foreground call",
+      "unsupported_extensions": [
+        "No background supervisor"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-11",
+      "public_wording": "Full business-meaning reconstruction and necessary-decision measurement are research targets.",
+      "package_version": "0.1.0",
+      "source_commit": null,
+      "source_sha256": {
+        "docs/operator-externalization.md": "37ad79ef230d4f5f6469c89a66296ab5e7a1b388dfbad221dec164c52935a3ff"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "docs/operator-externalization.md"
+      ],
+      "named_tests": [],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "SPECIFICATION_ONLY",
+      "observed_result": "No general semantic fixture executed",
+      "unsupported_extensions": [
+        "Two-counter trials cannot establish general business semantics"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-12",
+      "public_wording": "No matched comparative superiority result has been established.",
+      "package_version": "0.1.0",
+      "source_commit": null,
+      "source_sha256": {
+        "docs/related-work.md": "4503e7b5495fd5fcb9e4d1f9b6ca86bbeff6ca795d2d238c29807206606c2e9b"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "docs/related-work.md"
+      ],
+      "named_tests": [],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "NOT_ASSESSED",
+      "observed_result": "Source review only, no competitor runs",
+      "unsupported_extensions": [
+        "Worldwide uniqueness not established"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    },
+    {
+      "claim_id": "CW-13",
+      "public_wording": "Private Camden capabilities are not proved by the public package.",
+      "package_version": "0.1.0",
+      "source_commit": null,
+      "source_sha256": {
+        "docs/positioning.md": "9283ed7a0e11c4b658d20ecb2af32498f2a6b8cea80ba1e931aba53609ff71a9"
+      },
+      "trust_model": "Operator controls code/files; no hostile OS principal",
+      "target_boundary": "Synthetic local SQLite and explicit local inbox",
+      "source_paths": [
+        "docs/positioning.md"
+      ],
+      "named_tests": [],
+      "run_id": null,
+      "evidence_artifact_refs": [],
+      "evidence_status": "PRIVATE_NOT_PUBLICLY_PROVED",
+      "observed_result": "No private production trace exported",
+      "unsupported_extensions": [
+        "Public/private systems are distinct"
+      ],
+      "falsification_scenario": "Produce a contradictory trace within the exact declared trust and target boundary; unsupported claims require new implementation evidence",
+      "last_reviewed_at": "2026-09-24"
+    }
+  ]
+}

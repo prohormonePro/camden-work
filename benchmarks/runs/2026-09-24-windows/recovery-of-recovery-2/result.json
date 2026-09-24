@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "scenario_version": "cold-process-v1",
+  "episode_id": "recovery-of-recovery-2",
+  "scenario": "recovery-of-recovery",
+  "status": "BUSINESS_COMPLETE",
+  "B_e": 0,
+  "D_e": 0,
+  "S_e": {
+    "fixture_setup": "two grants, two obligations, takeover policy",
+    "human_minutes": "NOT_MEASURED"
+  },
+  "A_e": 3,
+  "U_e": [
+    "automatic_restart",
+    "background_wake",
+    "remote_effects",
+    "new_business_decision"
+  ],
+  "events": [
+    {
+      "event_id": "0",
+      "episode_id": "recovery-of-recovery-2",
+      "obligation": "workspace/works",
+      "actor": "benchmark_harness",
+      "event_type": "launch_clean_controller",
+      "authority_basis": "predeclared serial takeover policy",
+      "before_reference": "before.json",
+      "after_reference": "after.json",
+      "evidence_pointer": "process_exits",
+      "order": 0,
+      "burden_class": "A_e",
+      "disposition": "initial"
+    },
+    {
+      "event_id": "1",
+      "episode_id": "recovery-of-recovery-2",
+      "obligation": "workspace/works",
+      "actor": "benchmark_harness",
+      "event_type": "launch_clean_controller",
+      "authority_basis": "predeclared serial takeover policy",
+      "before_reference": "durable workspace",
+      "after_reference": "after.json",
+      "evidence_pointer": "process_exits",
+      "order": 1,
+      "burden_class": "A_e",
+      "disposition": "recovery-crash"
+    },
+    {
+      "event_id": "2",
+      "episode_id": "recovery-of-recovery-2",
+      "obligation": "workspace/works",
+      "actor": "benchmark_harness",
+      "event_type": "launch_clean_controller",
+      "authority_basis": "predeclared serial takeover policy",
+      "before_reference": "durable workspace",
+      "after_reference": "after.json",
+      "evidence_pointer": "process_exits",
+      "order": 2,
+      "burden_class": "A_e",
+      "disposition": "finish"
+    }
+  ],
+  "process_exits": [
+    72,
+    73,
+    0
+  ],
+  "started_at": 1790263419.5868242,
+  "checks": {
+    "same_obligations": true,
+    "exactly_one_effect_per_obligation": true,
+    "independent_verified": true,
+    "budget_deadline_preserved": true,
+    "attempts_not_reset": true,
+    "stale_owner_denied": true,
+    "local_return_complete": true,
+    "delivered_bytes_match": true
+  },
+  "closure": {
+    "ready": true,
+    "result": {
+      "artifact_sha256": "1100d0539b660acecea222af3f8facd5efd1bdbe5e035ec7efd23e5770021829",
+      "name": "complete-result",
+      "snapshot_sha256": "522511834dfad9476d44615efd16462c7c52f928db5d461ce1d08476f115f637"
+    },
+    "delivery_scope": "LOCAL_NODE_INBOX",
+    "remote_delivery": false,
+    "checked_at": 1790263420.30021
+  },
+  "elapsed_seconds": 0.75
+}

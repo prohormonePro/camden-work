@@ -11,3 +11,10 @@ Run `python -B -m unittest discover -s tests -v` from the source root. Tests use
 Changes to grants, effect identity, target evidence, reporting or storage require focused negative cases as well as success cases. Changes to public claims need an exact evidence reference. A maintainer reviews proposed changes before merging; a contribution does not acquire execution authority in any live Camden node.
 
 Treat submitted code and workflow changes as untrusted. Review and test them without production credentials. Do not run public pull requests on a live operator machine or a privileged self-hosted runner. Using this package does not obligate anyone to contribute compute, recruit agents, advertise the project or disclose private information. No payment, tokens or revenue share are offered.
+
+
+## Behavioral claims and reconstruction burden
+
+Every new behavior claim needs a declared version/trust boundary, actual source and named test, observed run when available, remaining limitation and falsifier. Update `docs/claims.json` and run `python -B tools/check_claims.py`. Reference validity is not scientific certification. Keep specification, source mapping, maintainer observation and public run evidence distinct.
+
+For continuity experiments, retain every started episode, including failures/timeouts, and record B_e/D_e/S_e/A_e/U_e from the operator-externalization specification. Report harness help and setup effort. No unsupported novelty, universal security or competitor-superiority claims; use a matched competent alternative that can falsify the claim.
