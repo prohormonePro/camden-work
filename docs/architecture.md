@@ -33,3 +33,24 @@ Frozen exports bind their Markdown and structured snapshot. Parent adoption chec
 ## Research interface
 
 The opt-in local MCP server uses stdio and exposes catalog search, entry lookup and explicitly scoped export inspection. It cannot dispatch effects, execute a shell, fetch URLs or obtain credentials. It implements the documented subset of the pinned MCP protocol; it is not an A2A service or a hosted public execution endpoint.
+
+
+## The complete obligation and the public boundary
+
+Desired outcome → scoped grant → admitted occurrence → owner/epoch → attempt → target effect or uncertainty → reconciliation → eligible work → fresh verification → adoption → local delivery/readback → finalization.
+
+This chain branches. Fresh visibility can invalidate cached success. A hash binds bytes, not business meaning. The public semantic contract is an increment on a synthetic target; natural-language intent compilation and general repair planning are outside it.
+
+| Stage | Actual record / method | Boundary |
+|---|---|---|
+| Authority | `grants`, `grant`, `revoke`, `valid_grant` | Trusted local operator; no OS sandbox. |
+| Admission | `works`, payload hash, dependencies, `admit` | Legitimate identical requests have separate IDs; attempts do not. |
+| Ownership | `owner`, `stop`, `claim`, `check_owner` | Explicit transfer, no autonomous takeover service. |
+| Effect and uncertainty | `attempts`, target `effects`, `execute`, `reconcile` | Atomic local occurrence marker; unavailable evidence stays UNKNOWN. |
+| Repair | `recover_local`, version-conditioned compensation | Local fence/lock proof; no arbitrary-provider retry authorization. |
+| Continuation | `waits`, `wait`, `service` | Preserved budget/deadline, foreground caller required. |
+| Verification | `observations`, `verify` | Exact local predicate, not universal semantic correctness. |
+| Return | `result_frozen`, `parent_adoption`, `local_delivery`, `local_ready` events | Complete current scope and exact inbox bytes, not human reading. |
+| Learning and meaning | No general public runtime counterpart | Research catalog and private-system objectives are not implementation proof. |
+
+`challenge.py` holds IDs and recovery order in its parent. The separate `benchmarks/continuity.py` controller receives only a workspace and declared fault phase, reads durable obligations/policy, and completes both tasks before result closure. The harness still supplies process launches. See [the fault matrix](continuity-gauntlet.md) for that assistance and unexercised stages.

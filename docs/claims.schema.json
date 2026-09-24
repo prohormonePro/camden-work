@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "claims"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "public_wording",
+          "package_version",
+          "source_commit",
+          "source_sha256",
+          "trust_model",
+          "target_boundary",
+          "source_paths",
+          "named_tests",
+          "run_id",
+          "evidence_artifact_refs",
+          "evidence_status",
+          "observed_result",
+          "unsupported_extensions",
+          "falsification_scenario",
+          "last_reviewed_at"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "public_wording": {},
+          "package_version": {},
+          "source_commit": {},
+          "source_sha256": {},
+          "trust_model": {},
+          "target_boundary": {},
+          "source_paths": {},
+          "named_tests": {},
+          "run_id": {},
+          "evidence_artifact_refs": {},
+          "evidence_status": {
+            "enum": [
+              "PUBLIC_SOURCE_AND_TEST_MAPPED",
+              "PUBLIC_RUN_OBSERVED",
+              "MAINTAINER_REPORTED",
+              "SPECIFICATION_ONLY",
+              "PARTIAL",
+              "PRIVATE_NOT_PUBLICLY_PROVED",
+              "UNSUPPORTED_THIS_RELEASE",
+              "NOT_ASSESSED"
+            ]
+          },
+          "observed_result": {},
+          "unsupported_extensions": {},
+          "falsification_scenario": {},
+          "last_reviewed_at": {}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
