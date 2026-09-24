@@ -1,0 +1,118 @@
+{
+  "version": "differentiation-1",
+  "catalog_sha256": "98c2919c8c7309cc402ac6af8ab7372e8194991f1c23bd096cdedc357561e4ce",
+  "default_mapping_status": "UNKNOWN",
+  "entries": [
+    {
+      "canonical_id": "AF-TX-02",
+      "chain_stage": "admission",
+      "safety_consequence": "Unjustified effect or success claim",
+      "liveness_consequence": "Unfinished work may require human reconstruction",
+      "operator_reconstruction_category": "false_completion",
+      "claim_id": "CW-06",
+      "public_implementation_test_reference": [
+        "tests/test_finalization.py::test_export_alone_cannot_finalize",
+        "tests/test_finalization.py::test_adoption_requires_actual_local_delivery"
+      ],
+      "related_external_mechanism": {
+        "status": "NOT_ASSESSED",
+        "source": "docs/related-work.md"
+      },
+      "mapping_status": "NARROW_LOCAL_MAPPING",
+      "residual_limitation": "Trusted local SQLite only",
+      "open_research_question": "Does a matched durable application achieve this contract with less reconstruction?"
+    },
+    {
+      "canonical_id": "AF-ID-01",
+      "chain_stage": "effect_preservation",
+      "safety_consequence": "Unjustified effect or success claim",
+      "liveness_consequence": "Unfinished work may require human reconstruction",
+      "operator_reconstruction_category": "repeat_effect",
+      "claim_id": "CW-01",
+      "public_implementation_test_reference": [
+        "tests/test_core.py::test_real_lost_ack_and_replacement"
+      ],
+      "related_external_mechanism": {
+        "status": "NOT_ASSESSED",
+        "source": "docs/related-work.md"
+      },
+      "mapping_status": "NARROW_LOCAL_MAPPING",
+      "residual_limitation": "Trusted local SQLite only",
+      "open_research_question": "Does a matched durable application achieve this contract with less reconstruction?"
+    },
+    {
+      "canonical_id": "AF-CC-11",
+      "chain_stage": "ownership",
+      "safety_consequence": "Unjustified effect or success claim",
+      "liveness_consequence": "Unfinished work may require human reconstruction",
+      "operator_reconstruction_category": "restore_owner",
+      "claim_id": "CW-03",
+      "public_implementation_test_reference": [
+        "tests/test_core.py::test_wrong_owner_version"
+      ],
+      "related_external_mechanism": {
+        "status": "NOT_ASSESSED",
+        "source": "docs/related-work.md"
+      },
+      "mapping_status": "NARROW_LOCAL_MAPPING",
+      "residual_limitation": "Trusted local SQLite only",
+      "open_research_question": "Does a matched durable application achieve this contract with less reconstruction?"
+    },
+    {
+      "canonical_id": "AF-VR-14",
+      "chain_stage": "closure",
+      "safety_consequence": "Unjustified effect or success claim",
+      "liveness_consequence": "Unfinished work may require human reconstruction",
+      "operator_reconstruction_category": "reconstruct_scope",
+      "claim_id": "CW-07",
+      "public_implementation_test_reference": [
+        "tests/test_finalization.py::test_altered_inbox_cannot_satisfy_delivery",
+        "tests/test_finalization.py::test_new_obligation_invalidates_frozen_result",
+        "tests/test_finalization.py::test_lost_target_visibility_invalidates_return"
+      ],
+      "related_external_mechanism": {
+        "status": "NOT_ASSESSED",
+        "source": "docs/related-work.md"
+      },
+      "mapping_status": "NARROW_LOCAL_MAPPING",
+      "residual_limitation": "Trusted local SQLite only",
+      "open_research_question": "Does a matched durable application achieve this contract with less reconstruction?"
+    },
+    {
+      "canonical_id": "AF-HT-06",
+      "chain_stage": "delivery",
+      "safety_consequence": "Unjustified effect or success claim",
+      "liveness_consequence": "Unfinished work may require human reconstruction",
+      "operator_reconstruction_category": "reconstruct_scope",
+      "claim_id": "CW-07",
+      "public_implementation_test_reference": [
+        "tests/test_finalization.py::test_altered_inbox_cannot_satisfy_delivery",
+        "tests/test_finalization.py::test_new_obligation_invalidates_frozen_result",
+        "tests/test_finalization.py::test_lost_target_visibility_invalidates_return"
+      ],
+      "related_external_mechanism": {
+        "status": "NOT_ASSESSED",
+        "source": "docs/related-work.md"
+      },
+      "mapping_status": "NARROW_LOCAL_MAPPING",
+      "residual_limitation": "Trusted local SQLite only",
+      "open_research_question": "Does a matched durable application achieve this contract with less reconstruction?"
+    },
+    {
+      "canonical_id": "AF-LV-10",
+      "chain_stage": "continuation",
+      "safety_consequence": "Unjustified effect or success claim",
+      "liveness_consequence": "Unfinished work may require human reconstruction",
+      "operator_reconstruction_category": "find_wake",
+      "claim_id": "CW-10",
+      "public_implementation_test_reference": [],
+      "related_external_mechanism": {
+        "status": "NOT_ASSESSED",
+        "source": "docs/related-work.md"
+      },
+      "mapping_status": "UNSUPPORTED_THIS_RELEASE",
+      "residual_limitation": "No background supervisor",
+      "open_research_question": "Does a matched durable application achieve this contract with less reconstruction?"
+    }
+  ]
+}

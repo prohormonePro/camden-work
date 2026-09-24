@@ -25,3 +25,8 @@ Inert import, bounded foreground servicing, resource limits, cancellation accoun
 Your existing durable workflow engine may already provide the primitives you need. Nondeterministic model calls can be recorded at appropriate durable boundaries; they do not inherently invalidate every workflow engine. Compare the actual version, target contract, state storage, effect semantics and recovery behavior before choosing an integration.
 
 Reading the documentation or running a local test grants no authority over another account or system. Unknown outcomes stay unknown until appropriate evidence resolves them. A signature identifies a signer; a hash identifies bytes. Neither alone proves semantic correctness.
+
+
+## September 24 continuity research layer
+
+The release and September 23 qualification remain historical anchors. The new [evidence page](evidence.md) adds a separately identified source-tree cold-process experiment and a [burden specification](operator-externalization.md). Neither changes the v0.1.0 wheel, installs a wake, demonstrates a remote effect adapter or proves private Camden capabilities. Source-only comparisons are not competitor runs.

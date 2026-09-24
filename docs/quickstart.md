@@ -103,3 +103,8 @@ Configure this command as a local stdio server only if your operator permits it.
 ## Stop and remove
 
 Stop the node before removing its application environment. Uninstalling the Python package does not delete the workspace or revoke credentials belonging to another system. Preserve the exported evidence first. The current release has no automatic workspace deletion command; deleting the operator-selected synthetic workspace is an intentional loss of its retained history. No remote effects are undone by removing local files.
+
+
+## Challenge versus continuity research
+
+The installed challenge retains its parent recovery sequence and exports its result. It does not exercise the entire adoption/delivery chain. [Evidence](evidence.md) distinguishes its seven predicates from separate finalization tests and the source-tree [cold-process experiment](continuity-gauntlet.md). That experiment counts harness launches and does not install a supervisor. The existing acquisition, grants, stop/revoke, MCP and removal instructions above remain the released interface.
